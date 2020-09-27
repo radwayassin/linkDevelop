@@ -1,0 +1,22 @@
+<div class="press-releas">
+    <div class="container c-edit">
+        <h6 class="text-center">Our Lastest</h6>
+        <h4 class="text-center"> <a routerLink="/press-releases"> Press Releases </a></h4>
+        <div class="row">
+            <div class="col-md-3 edit" *ngFor="let p of PressHomeON | slice:0:4; let i=index">
+                <div class="card text-white">
+                    <img class="card-img" [src]="p.urlToImage" alt="Card image">
+                    <div class="card-img-overlay">
+                        <div class="card-title">
+                            <h1>{{p.publishedAt | date:'d'}}</h1>
+                            <h4>{{p.publishedAt | date:'MMMM'}}</h4>
+                            <h6>{{p.publishedAt | date:'EEEE y'}}</h6>
+                        </div>
+                        <p class="card-text">{{p.title}}</p>
+                        <a class="btn read-btn" routerLink="/press-details">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

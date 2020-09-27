@@ -136,6 +136,7 @@
       color: #fff;
       .card-img-overlay {
         background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 0;
         h6 {
           text-transform: uppercase;
           color: #fff;
@@ -206,7 +207,7 @@
     img {
       width: 45px;
       margin-top: 20%;
-      &.c-size{
+      &.c-size {
         width: 35px;
       }
     }
@@ -230,17 +231,17 @@
       img {
         width: 25px;
         margin-top: 0;
-        &.c-size{
-          width:20px ;
+        &.c-size {
+          width: 20px;
         }
       }
-      i{
+      i {
         font-size: 10px;
         position: absolute;
         top: 91%;
         left: 50%;
       }
-      h6{
+      h6 {
         margin-top: 0;
         font-size: 11px;
       }
