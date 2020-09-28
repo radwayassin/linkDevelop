@@ -15,7 +15,9 @@ export class PressReleasesComponent implements OnInit {
     private _http: HttpClient,
     private _PressReleasesService: PressReleasesService
   ) { }
-
+  getDetails(p:any){
+    localStorage.setItem('myDataStorage', JSON.stringify(p));
+  }
   ngOnInit() {
     this._PressReleasesService.getPressData().subscribe((articles) => {
       this.PressData = articles;

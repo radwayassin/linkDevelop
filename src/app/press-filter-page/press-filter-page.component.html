@@ -10,7 +10,7 @@
                     </button>
                     <div class="dropdown-menu drop-m" aria-labelledby="dropdownMenuButton">
                         <div *ngFor="let c of Categories">
-                            <a class="dropdown-item" (click)="valueSelected(c.id)">
+                            <a class="dropdown-item" routerLink="/press-releases" (click)="valueSelected(c.id)">
                                 {{c.name}}
                             </a>
                         </div>
@@ -20,15 +20,16 @@
             <div class="col-md-8">
                 <div class="input-group search-bar">
                     <input type="search" class="form-control" placeholder="Title" aria-label="Recipient's username"
-                        aria-describedby="basic-addon2">
+                        aria-describedby="basic-addon2" #term (keyup.enter)="search(term.value)">
                     <div class="input-group-append">
-                        <button class="btn btn-search" type="button" ><i class="fas fa-search"></i></button>
+                        <button class="btn btn-search" type="button" (click)="search(term.value)"><i
+                                class="fas fa-search"></i></button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 " *ngFor="let p of PressFilter | slice:0:8; let i=index">
+            <div class="col-md-3 f-edit" *ngFor="let p of FilterData | slice:0:show; let i=index">
                 <div class="card card-data text-white">
                     <img class="card-img" [src]="p.urlToImage" alt="Card image">
                     <div class="card-img-overlay">
@@ -38,14 +39,14 @@
                             <h6>{{p.publishedAt | date:'EEEE y'}}</h6>
                         </div>
                         <p class="card-text">{{p.title}}</p>
-                        <a class="btn read-btn" routerLink="/press-details">Read More</a>
+                        <a class="btn read-btn" routerLink="/press-details" (click)="getDetails(p)">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <button class="btn load-btn " (click)="loadMore()">load more</button>
+                <button class="btn load-btn " (click)="show = PressFilter.length">load more</button>
             </div>
         </div>
     </div>

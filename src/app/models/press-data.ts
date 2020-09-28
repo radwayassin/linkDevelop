@@ -1,4 +1,6 @@
 export interface PressData {
+    category: string;
+    Categories: any;
     sourceCategory: Array<any>,
     articles: Array<any>,
     sourceID: number,
