@@ -1,0 +1,51 @@
+.programs {
+  .owl-carousel .owl-nav {
+    display: block;
+    button.owl-prev {
+      left: -5%;
+      top: 60%;
+      position: absolute;
+      border: 1px solid #168d91;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      line-height: 20px;
+      span {
+        color: #168d91;
+        font-size: 40px;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &:focus {
+        outline: none;
+      }
+      @media (max-width: 768px) {
+        left: -13%;
+      }
+    }
+    button.owl-next {
+      right: -5%;
+      top: 60%;
+      position: absolute;
+      border: 1px solid #168d91;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      line-height: 20px;
+      span {
+        color: #168d91;
+        font-size: 40px;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+      &:focus {
+        outline: none;
+      }
+      @media (max-width: 768px) {
+        right: -13%;
+      }
+    }
+  }
+}

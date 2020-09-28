@@ -1,47 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-.programs {
-  .owl-carousel .owl-nav.disabled {
-    display: block;
-    button.owl-prev {
-      left: -5%;
-      top: 60%;
-      position: absolute;
-      border: 1px solid #168d91;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      line-height: 20px;
-      span {
-        color: #168d91;
-        font-size: 40px;
-      }
-      &:hover {
-        background-color: transparent;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-    button.owl-next {
-      right: -5%;
-      top: 60%;
-      position: absolute;
-      border: 1px solid #168d91;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      line-height: 20px;
-      span {
-        color: #168d91;
-        font-size: 40px;
-      }
-      &:hover {
-        background-color: transparent;
-      }
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-}
+@import "assets/css/carousel";
+
